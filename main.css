@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  /*   colors  */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /*  neutral  */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/*  MOBILE - FIRST DESIGN  */ 
+
+body {
+  background: hsl(30, 38%, 92%);
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  margin: auto;
+  padding: 0;  
+ /* width: 400px;*/
+}
+
+.card {
+  width: 100%;
+  background:hsl(0, 0%, 100%);
+  max-width: 375px;  
+  margin: 40px auto 8px auto;
+  border-radius: 12px 12px 12px 12px;  
+  overflow: hidden;
+}
+
+.desktop,
+.desktop img {
+  display: none;
+}
+
+.mobile {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 39vh;  
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 25px;
+}
+
+.card-info h2 {
+  font-family: 'Monserrat', sans-serif;
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.card-info h1 {
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 35px;
+  margin-bottom: 12px;
+}
+
+.card-info .desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: hsl(228, 12%, 48%);  
+  line-height: 24px;
+  margin-bottom: 20px; 
+  padding-right: 8px; 
+}
+
+.card-info .deal {
+  display: flex;   
+  font-family: 'Fraunces', sans-serif;
+  font-size: 2.1rem;
+  color: hsl(158, 36%, 37%);
+  margin-bottom: 12px;
+}
+
+.card-info .price {
+  margin-left: 20px;
+  /*font-family: 'Fraunces', sans-serif;
+  font-weight: light;*/ 
+  font-family: 'Monserrat', sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 0.8rem;
+  padding-top: 15px;
+  text-decoration: line-through;
+}
+
+button {
+  width: 100%;
+  padding: 15px 50px;
+  font-size: 0.95rem;
+  background:hsl(158, 36%, 37%);
+  color:hsl(0, 0%, 100%, 0.9);
+  font-weight: bold;
+  border-radius: 10px;
+  border: none; 
+}
+
+button:hover {
+  background:hsl(158, 35%, 20%)
+}
+
+button img {
+  margin-right: 10px;
+}
+
+.attribution {
+  margin-bottom: 50px;  
+}
+ .attribution a {
+  font-size: 1rem;
+  color: purple;
+ }
+
+@media only screen and (min-width: 800px) {
+
+
+  .body {
+    width:100%;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 685px;
+    height: 500px;
+    margin-top: 100px;
+  }
+
+  .mobile,
+  .mobile img {
+    display: none;    
+  }
+
+  .desktop,
+  .desktop img {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-info {
+    padding: 36px;
+  }
+
+  .card-info h2 {
+    margin: 5px auto 20px auto;
+    letter-spacing: 7px;
+    font-size: 0.8rem;
+    opacity: 0.9;
+  }
+
+  .card-info h1 {
+    font-size: 2.25rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+  }
+
+  .card-info .desc {
+    font-size: 1rem;
+    line-height: 27px;
+    margin-bottom: 25px;
+  }
+
+  .card-info .deal {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+  }
+
+  .card-info .price {
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 17px 50px;
+    font-size: 1rem;
+  }
+
+  button img {
+    margin-left: -3px;
+    margin-bottom: -2px;
+  }
+
+
+}
